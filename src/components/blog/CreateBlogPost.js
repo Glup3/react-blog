@@ -33,7 +33,7 @@ class CreateBlogPost extends Component {
             <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
+            <button className="btn pink lighten-1 z-depth-0">Create</button>
           </div>
         </form>
       </div>
@@ -43,7 +43,7 @@ class CreateBlogPost extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBlogPost: (project) => dispatch(createBlogPost(project))
+    createBlogPost: (blogPost) => dispatch(createBlogPost(blogPost))
   }
 }
 
