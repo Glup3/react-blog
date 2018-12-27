@@ -5,6 +5,8 @@ import Dashboard from './components/dashboard/Dashboard';
 import BlogPostDetails from './components/blog/BlogPostDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
+import CreateBlogPost from './components/blog/CreateBlogPost';
+
 
 class App extends Component {
   render() {
@@ -17,6 +19,7 @@ class App extends Component {
             <Route path="/blog/:id" component={BlogPostDetails} />
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
+            <Route path="/create" component={CreateBlogPost} />
           </Switch>
         </div>
       </BrowserRouter>
