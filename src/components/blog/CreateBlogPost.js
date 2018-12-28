@@ -17,6 +17,16 @@ class CreateBlogPost extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    
+    //TODO Validation
+    if (this.state.title === "") {
+      return;
+    }
+
+    if (this.state.content === "") {
+      return;
+    }
+
     this.props.createBlogPost(this.state);
     this.props.history.push("/");
   }
@@ -29,19 +39,19 @@ class CreateBlogPost extends Component {
     }
 
     return (
-      <div className="container">
+      <div className="container my-form">
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">Create a new Blog Post</h5>
           <div className="input-field">
             <label htmlFor="title">Title</label>
-            <input type="text" id="title" onChange={this.handleChange} />
+            <input type="text" id="title" value={this.state.title} onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <label htmlFor="content">Content</label>
-            <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
+            <textarea id="content" className="materialize-textarea" value={this.state.content} onChange={this.handleChange}></textarea>
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Create</button>
+            <button className="btn blue waves-effect waves-purple">Create</button>
           </div>
         </form>
       </div>
