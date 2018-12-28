@@ -16,7 +16,7 @@ const createNotification = (notification) => {
 
 exports.blogpostCreated = functions.firestore
   .document('blogposts/{blogpostId}')
-  .onCreate(doc => {
+  .onCreate((doc) => {
     const blogpost = doc.data();
     const notification = {
       content: 'Added a new blogpost',
@@ -25,11 +25,25 @@ exports.blogpostCreated = functions.firestore
     };
 
     return createNotification(notification);
-  })
+})
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+exports.userJoined = functions.auth
+  .user()
+  .onCreate((user) => {
+
+
+    return admin
+      .firestore()
+      .collection('users')
+      .doc(user.uid)
+      .get()
+      .then((doc) => {
+        const newUser = doc.data();
+        const notification = {
+          content: 'Welcome Boss',
+          user: `${newUser.firstName} ${newUser.lastName}`,
+          time: admin.firestore.FieldValue.serverTimestamp()
+        }
+        return createNotification(notification);
+      })
+})
