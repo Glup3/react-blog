@@ -15,12 +15,12 @@ const BlogPostDetails = (props) => {
   if (blogpost) {
     return (
       <div>
-        <div className="container section blogpost-details">
-          <div className="card z-depth-0">
-            <span className="card-title">{ blogpost.title }</span>
+        <div className="container section blogpost-container">
+          <div className="card z-depth-0 blogpost-details">
+            <h2 className="card-title center blogpost-title">{ blogpost.title }</h2>
             <p>{ blogpost.content }</p>
           </div>
-          <div className="card-action grey lighten-4 grey-text">
+          <div className="card-action grey-text text-darken-3 blogpost-posted">
             <div>Posted by { blogpost.authorFirstName } { blogpost.authorLastName }</div>
             <div>{ moment(blogpost.createdAt.toDate()).calendar() }</div>
           </div>

@@ -4,6 +4,7 @@
   --blue: #006494;
   --lapis: #247BA0;
   --dark-blue: #13293D;
+  --other-blue: #90caf9;
 }
 
 body {
@@ -30,7 +31,35 @@ body {
 }
 
 .notification-container {
-  background-color: #90caf9   ;
+  background-color: var(--other-blue);
+  border: 1px solid #000;
+
+}
+
+.blogpost-details {
+  margin: 0;
+  padding: 10px;
+}
+
+.blogpost-title {
+  margin: 0;
+}
+
+.blogpost-container {
+  margin-top: 20px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.blogpost-posted {
+  padding: 10px;
+  background-color: var(--other-blue);
+  border-top: 1px solid #000;
+}
+
+.dashboard {
+  margin-top: 20px;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
