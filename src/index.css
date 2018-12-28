@@ -29,6 +29,10 @@ body {
   background-color: var(--dark-blue);
 }
 
+.notification-container {
+  background-color: #90caf9   ;
+}
+
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
