@@ -1,3 +1,11 @@
+:root {
+  --white: #E8F1F2;
+  --light-blue: #1B98E0;
+  --blue: #006494;
+  --lapis: #247BA0;
+  --dark-blue: #13293D;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +14,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.my-form {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 15px;
+  border: 1.4px solid var(--dark-blue);
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: var(--lapis);
+  box-shadow: none;
 }
