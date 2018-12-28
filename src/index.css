@@ -25,6 +25,10 @@ body {
   border: 1px solid var(--dark-blue);
 }
 
+.my-initials {
+  background-color: var(--dark-blue);
+}
+
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
