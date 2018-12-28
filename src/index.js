@@ -22,9 +22,7 @@ const store = createStore(
     reactReduxFirebase(fbConfig)
   )
 );
-
-//TODO migration guide: http://bit.ly/2SRNdiO
-    
+  
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 serviceWorker.unregister();
