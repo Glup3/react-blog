@@ -37,7 +37,7 @@ class SignIn extends Component {
             <input type="email" id="email" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-          <i className="material-icons prefix blue-text text">vpn_key</i>
+            <i className="material-icons prefix blue-text text">vpn_key</i>
             <label htmlFor="password">Password</label>
             <input type="password" id="password" onChange={this.handleChange} />
           </div>

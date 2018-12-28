@@ -22,7 +22,7 @@ body {
   padding: 10px;
   margin-top: 50px;
   border-radius: 15px;
-  border: 1.4px solid var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
