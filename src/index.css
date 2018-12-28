@@ -33,7 +33,6 @@ body {
 .notification-container {
   background-color: var(--other-blue);
   border: 1px solid #000;
-
 }
 
 .blogpost-details {
@@ -52,10 +51,21 @@ body {
   border: 1px solid #000;
 }
 
+.blogpost-summary {
+  border: 1px solid #000;
+  background-color: var(--other-blue);
+  margin: 10px;
+  padding: 10px;
+}
+
 .blogpost-posted {
   padding: 10px;
   background-color: var(--other-blue);
   border-top: 1px solid #000;
+}
+
+.section {
+  padding: 0px;
 }
 
 .dashboard {
