@@ -5,7 +5,7 @@ const BlogPostSummary = ({blogpost}) => {
     <div className="card-z-depth-0 blogpost-summary">
       <div className="card-content grey-text text-darken-3">
         <span className="card-title">{blogpost.title}</span>
-        <p>Posted by Phu</p>
+        <p>Posted by {blogpost.authorFirstName} {blogpost.authorLastName}</p>
         <p className="grey-text">Date</p>
       </div>
     </div>
