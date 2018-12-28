@@ -19,7 +19,7 @@ exports.blogpostCreated = functions.firestore
   .onCreate((doc) => {
     const blogpost = doc.data();
     const notification = {
-      content: 'Added a new blogpost',
+      content: 'created a new blogpost',
       user: `${blogpost.authorFirstName} ${blogpost.authorLastName}`,
       time: admin.firestore.FieldValue.serverTimestamp()
     };
@@ -40,7 +40,7 @@ exports.userJoined = functions.auth
       .then((doc) => {
         const newUser = doc.data();
         const notification = {
-          content: 'Welcome Boss',
+          content: 'joined our blog',
           user: `${newUser.firstName} ${newUser.lastName}`,
           time: admin.firestore.FieldValue.serverTimestamp()
         }
